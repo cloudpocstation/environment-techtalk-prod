@@ -10,6 +10,7 @@ cleanup:
   Args: 
     - --cleanup
   Annotations:
+    sidecar.istio.io/inject: "false"
     helm.sh/hook: pre-delete
     helm.sh/hook-delete-policy: hook-succeeded
 expose:
@@ -18,5 +19,6 @@ expose:
     exposer: Ingress
     http: "true"
   Annotations:
+    sidecar.istio.io/inject: "false"
     helm.sh/hook: post-install,post-upgrade
     helm.sh/hook-delete-policy: hook-succeeded
