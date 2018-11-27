@@ -13,7 +13,7 @@ cleanup:
     sidecar.istio.io/inject: "false"
     helm.sh/hook: pre-delete
     helm.sh/hook-delete-policy: hook-succeeded
-  SpecTemplateMatedataAnnotations:
+  SpecTemplateMetadataAnnotations:
     sidecar.istio.io/inject: "false"
 
 expose:
@@ -25,5 +25,5 @@ expose:
     sidecar.istio.io/inject: "false"
     helm.sh/hook: post-install,post-upgrade
     helm.sh/hook-delete-policy: hook-succeeded
-  SpecTemplateMatedataAnnotations:
+  SpecTemplateMetadataAnnotations:
     sidecar.istio.io/inject: "false"
