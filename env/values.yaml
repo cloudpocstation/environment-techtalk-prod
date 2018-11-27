@@ -13,10 +13,9 @@ cleanup:
     sidecar.istio.io/inject: "false"
     helm.sh/hook: pre-delete
     helm.sh/hook-delete-policy: hook-succeeded
-  template:
-      metadata:
-        Annotations:
-          sidecar.istio.io/inject: "false"
+  SpecTemplateMatedataAnnotations:
+    sidecar.istio.io/inject: "false"
+
 expose:
   config:
     domain: tech-talk-ntt.com
@@ -26,7 +25,5 @@ expose:
     sidecar.istio.io/inject: "false"
     helm.sh/hook: post-install,post-upgrade
     helm.sh/hook-delete-policy: hook-succeeded
-  template:
-      metadata:
-        Annotations:
-          sidecar.istio.io/inject: "false"
+  SpecTemplateMatedataAnnotations:
+    sidecar.istio.io/inject: "false"
